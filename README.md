@@ -8,11 +8,16 @@ Agente IA con 5 herramientas
 Para comenzar rápidamente:
 
 1-Activa tu entorno virtual (source .venv/bin/activate).
+
 2-Configura tu GEMINI_API_KEY o pégala directamente en la ranura de seguridad superior de la interfaz web.
+
 3-Inicia el servidor con python3 -m uvicorn app:app --reload.
+
 4-Abre http://localhost:8000 en tu navegador.
 
+
 ------5 Herramientas------
+
 El agente de IA esta equipado con las siguientes 5 herramientas implementadas en Python de manera segura y eficiente:
 
 1.get_weather(city: str) -> str: Consulta el clima actual y el pronóstico de cualquier ciudad del mundo en tiempo real utilizando la API pública y sin llave de wttr.in.
