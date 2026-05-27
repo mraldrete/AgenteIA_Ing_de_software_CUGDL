@@ -1,0 +1,6 @@
+google-antigravity
+fastapi
+uvicorn
+httpx
+python-dotenv
+pydantic
