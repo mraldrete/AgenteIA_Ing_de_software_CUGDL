@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antigravity AI Agent - Multi-Tool Dashboard</title>
-    <meta name="description" content="Dashboard premium de Agente de Inteligencia Artificial con 5 herramientas asíncronas personalizadas, pensamientos en vivo y ejecuciones en tiempo real.">
+    <title>Agente IA - ingenieria de software </title>
+    <meta name="description"
+        content="Dashboard premium de Agente de Inteligencia Artificial con 5 herramientas asíncronas personalizadas, pensamientos en vivo y ejecuciones en tiempo real.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style -->
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
+
 <body>
     <div class="stars-container"></div>
     <div class="glow-orb glow-orb-1"></div>
@@ -26,11 +31,12 @@
                 <i class="fa-solid fa-brain-circuit logo-icon"></i>
             </div>
             <div class="logo-text">
-                <h1>Antigravity AI</h1>
-                <p>Agente Autónomo Multi-Tool</p>
+                <h1>Agente IA - ingenieria de software - CUGDL</h1>
+                <p>Agente Autónomo Multi-herramienta</p>
+                <p>Mario R. Aldrete </p>
             </div>
         </div>
-        
+
         <div class="api-key-container glass-panel">
             <div class="key-status-indicator" id="keyStatus">
                 <span class="pulse-dot active"></span>
@@ -38,7 +44,8 @@
             </div>
             <div class="api-input-wrapper">
                 <i class="fa-solid fa-key input-key-icon"></i>
-                <input type="password" id="apiKeyInput" placeholder="Introduce tu GEMINI_API_KEY si no está en el servidor..." autocomplete="off">
+                <input type="password" id="apiKeyInput"
+                    placeholder="Introduce tu GEMINI_API_KEY si no está en el servidor..." autocomplete="off">
             </div>
         </div>
     </header>
@@ -60,18 +67,23 @@
                 <div class="chat-bubble agent-message fade-in">
                     <div class="message-sender">
                         <i class="fa-solid fa-robot"></i>
-                        <span>Antigravity Assistant</span>
+                        <span>AGENTE IA</span>
                     </div>
                     <div class="message-text">
-                        ¡Hola! Soy tu asistente inteligente autónomo. Estoy equipado con **5 herramientas personalizadas** listas para ayudarte:
-                        
-                        1. 🌦️ **Weather Finder**: Clima de cualquier ciudad en tiempo real.
-                        2. 🐙 **GitHub Explorer**: Búsqueda avanzada de repositorios.
-                        3. 💵 **Currency Exchange**: Conversión de divisas con tasas actuales.
-                        4. 🔢 **Math Calculator**: Evaluación de expresiones de forma segura.
-                        5. 📊 **Text Statistics**: Análisis sintáctico y métricas de textos.
-                        
-                        Pregúntame algo como: *"¿Cuál es el clima en París hoy?"*, *"Busca repositorios de Rust con machine learning"* o *"Calcula sqrt(144) + log10(1000) * 3"*. ¡Estaré encantado de llamarlas automáticamente!
+                        ¡Hola! Soy tu asistente inteligente autónomo.
+                        Estoy equipado con **5 herramientas personalizadas listas para ayudarte:
+
+                        1. 🌦️ Weather Finder: Clima de cualquier ciudad en tiempo real.
+                        2. 🐙 GitHub Explorer: Búsqueda avanzada de repositorios.
+                        3. 💵 Currency Exchange: Conversión de divisas con tasas actuales.
+                        4. 🔢 Math Calculator: Evaluación de expresiones de forma segura.
+                        5. 📊 Text Statistics: Análisis sintáctico y métricas de textos.
+
+                        Pregúntame algo como:
+                        "¿Cuál es el clima en Guadalajara hoy?"
+                        "Busca repositorios de Rust con machine learning"
+                        "Calcula sqrt(144) + log10(1000) * 3"
+                        ¡Estaré encantado de llamarlas automáticamente!
                     </div>
                 </div>
             </div>
@@ -106,7 +118,8 @@
 
             <!-- Caja de Entrada del Chat -->
             <form class="chat-input-area" id="chatForm">
-                <input type="text" id="userInput" placeholder="Escribe tu consulta para el agente..." autocomplete="off" required id="query-input-field">
+                <input type="text" id="userInput" placeholder="Escribe tu consulta para el agente..." autocomplete="off"
+                    required id="query-input-field">
                 <button type="submit" id="sendBtn" class="send-btn" aria-label="Enviar Mensaje">
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -118,14 +131,19 @@
             <div class="section-header">
                 <h2><i class="fa-solid fa-sliders"></i> Panel de Control de Herramientas</h2>
             </div>
-            
+
             <div class="tools-tab-container">
                 <nav class="tools-nav">
-                    <button class="tab-btn active" onclick="switchToolTab('weather-tab')"><i class="fa-solid fa-cloud-sun"></i> Clima</button>
-                    <button class="tab-btn" onclick="switchToolTab('github-tab')"><i class="fa-brands fa-github"></i> GitHub</button>
-                    <button class="tab-btn" onclick="switchToolTab('currency-tab')"><i class="fa-solid fa-money-bill-transfer"></i> Divisas</button>
-                    <button class="tab-btn" onclick="switchToolTab('math-tab')"><i class="fa-solid fa-calculator"></i> Calculadora</button>
-                    <button class="tab-btn" onclick="switchToolTab('text-tab')"><i class="fa-solid fa-align-left"></i> Texto</button>
+                    <button class="tab-btn active" onclick="switchToolTab('weather-tab')"><i
+                            class="fa-solid fa-cloud-sun"></i> Clima</button>
+                    <button class="tab-btn" onclick="switchToolTab('github-tab')"><i class="fa-brands fa-github"></i>
+                        GitHub</button>
+                    <button class="tab-btn" onclick="switchToolTab('currency-tab')"><i
+                            class="fa-solid fa-money-bill-transfer"></i> Divisas</button>
+                    <button class="tab-btn" onclick="switchToolTab('math-tab')"><i class="fa-solid fa-calculator"></i>
+                        Calculadora</button>
+                    <button class="tab-btn" onclick="switchToolTab('text-tab')"><i class="fa-solid fa-align-left"></i>
+                        Texto</button>
                 </nav>
             </div>
 
@@ -135,7 +153,8 @@
                     <div class="tool-meta">
                         <h3>Weather Finder</h3>
                         <span class="badge active-badge"><i class="fa-solid fa-check"></i> Activa</span>
-                        <p class="tool-desc">Consulta el clima actual y las condiciones meteorológicas en tiempo real de cualquier ciudad.</p>
+                        <p class="tool-desc">Consulta el clima actual y las condiciones meteorológicas en tiempo real de
+                            cualquier ciudad.</p>
                         <div class="code-signature">
                             <code>get_weather(city: str) -> str</code>
                         </div>
@@ -143,7 +162,8 @@
                     <form class="manual-test-form" onsubmit="manualTestTool(event, 'weather')">
                         <label for="weather-city">Ciudad:</label>
                         <input type="text" id="weather-city" placeholder="Ej. Madrid, Paris, Tokyo" required>
-                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar Herramienta</button>
+                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar
+                            Herramienta</button>
                     </form>
                     <div class="test-result-box glass-panel" id="weather-result">
                         <span class="placeholder-text">Los resultados se mostrarán aquí...</span>
@@ -155,7 +175,8 @@
                     <div class="tool-meta">
                         <h3>GitHub Explorer</h3>
                         <span class="badge active-badge"><i class="fa-solid fa-check"></i> Activa</span>
-                        <p class="tool-desc">Busca los repositorios más populares en GitHub que coincidan con tus palabras clave y lenguaje.</p>
+                        <p class="tool-desc">Busca los repositorios más populares en GitHub que coincidan con tus
+                            palabras clave y lenguaje.</p>
                         <div class="code-signature">
                             <code>search_github_repos(query: str, language: str = None) -> str</code>
                         </div>
@@ -165,7 +186,8 @@
                         <input type="text" id="github-query" placeholder="Ej. fastapi, tensorflow" required>
                         <label for="github-lang">Lenguaje (Opcional):</label>
                         <input type="text" id="github-lang" placeholder="Ej. Python, Rust, JavaScript">
-                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar Herramienta</button>
+                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar
+                            Herramienta</button>
                     </form>
                     <div class="test-result-box glass-panel" id="github-result">
                         <span class="placeholder-text">Los resultados se mostrarán aquí...</span>
@@ -177,7 +199,8 @@
                     <div class="tool-meta">
                         <h3>Currency Exchange</h3>
                         <span class="badge active-badge"><i class="fa-solid fa-check"></i> Activa</span>
-                        <p class="tool-desc">Realiza conversiones de dinero instantáneas utilizando tasas de cambio actualizadas.</p>
+                        <p class="tool-desc">Realiza conversiones de dinero instantáneas utilizando tasas de cambio
+                            actualizadas.</p>
                         <div class="code-signature">
                             <code>convert_currency(amount: float, from_currency: str, to_currency: str) -> str</code>
                         </div>
@@ -197,7 +220,8 @@
                                 <input type="text" id="currency-to" placeholder="Ej. MXN, EUR" required maxlength="3">
                             </div>
                         </div>
-                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar Herramienta</button>
+                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar
+                            Herramienta</button>
                     </form>
                     <div class="test-result-box glass-panel" id="currency-result">
                         <span class="placeholder-text">Los resultados se mostrarán aquí...</span>
@@ -209,7 +233,8 @@
                     <div class="tool-meta">
                         <h3>Math Calculator</h3>
                         <span class="badge active-badge"><i class="fa-solid fa-check"></i> Activa</span>
-                        <p class="tool-desc">Evalúa de forma segura expresiones matemáticas complejas utilizando funciones algebraicas y trigonométricas.</p>
+                        <p class="tool-desc">Evalúa de forma segura expresiones matemáticas complejas utilizando
+                            funciones algebraicas y trigonométricas.</p>
                         <div class="code-signature">
                             <code>calculate_expression(expression: str) -> str</code>
                         </div>
@@ -217,7 +242,8 @@
                     <form class="manual-test-form" onsubmit="manualTestTool(event, 'math')">
                         <label for="math-expr">Expresión:</label>
                         <input type="text" id="math-expr" placeholder="Ej. sqrt(144) + 5 * log10(100)" required>
-                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar Herramienta</button>
+                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar
+                            Herramienta</button>
                     </form>
                     <div class="test-result-box glass-panel" id="math-result">
                         <span class="placeholder-text">Los resultados se mostrarán aquí...</span>
@@ -229,15 +255,18 @@
                     <div class="tool-meta">
                         <h3>Text Statistics</h3>
                         <span class="badge active-badge"><i class="fa-solid fa-check"></i> Activa</span>
-                        <p class="tool-desc">Analiza textos y proporciona recuentos exactos, tiempo de lectura, densidad de keywords y legibilidad Flesch.</p>
+                        <p class="tool-desc">Analiza textos y proporciona recuentos exactos, tiempo de lectura, densidad
+                            de keywords y legibilidad Flesch.</p>
                         <div class="code-signature">
                             <code>analyze_text(text: str) -> str</code>
                         </div>
                     </div>
                     <form class="manual-test-form" onsubmit="manualTestTool(event, 'text')">
                         <label for="text-content">Texto a analizar:</label>
-                        <textarea id="text-content" rows="4" placeholder="Copia y pega un texto o artículo largo aquí..." required></textarea>
-                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar Herramienta</button>
+                        <textarea id="text-content" rows="4"
+                            placeholder="Copia y pega un texto o artículo largo aquí..." required></textarea>
+                        <button type="submit" class="test-btn"><i class="fa-solid fa-play"></i> Probar
+                            Herramienta</button>
                     </form>
                     <div class="test-result-box glass-panel" id="text-result">
                         <span class="placeholder-text">Los resultados se mostrarán aquí...</span>
@@ -254,4 +283,5 @@
     <!-- Custom JavaScript -->
     <script src="/static/js/app.js"></script>
 </body>
+
 </html>
